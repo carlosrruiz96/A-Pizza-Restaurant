@@ -1,0 +1,314 @@
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-nav :hover{ 
+   font-size: 15px;
+    color: blue;
+}
+
+.logo{
+    border-radius: 50%;
+}
+.navbar-brand :hover{
+    font-size: 20px;
+}
+
+
+.fa-cart-shopping{
+    font-size: 2rem;
+    
+}
+/* Home */
+
+.banner{
+    position: relative;
+}
+
+.img-home{
+    width: 100%;
+    height: auto;
+}
+
+.info{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    color: rgb(222, 215, 218);
+    font-size: 1px;
+}
+
+.info h1{
+    font-size: 3.5rem;
+}
+
+
+/* Media Query */
+@media (max-width:770px) {
+
+    .ul-carrito{
+        padding: 0 !important ;
+    }
+    
+    .info h1{
+        font-size: 1.6rem !important ; 
+        
+    }
+}
+
+
+/* Gallery */
+.image{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px; 
+    object-fit: cover;
+    object-position: center center;
+}
+
+@media (max-width:770px) {
+    .image{
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+
+/* MENU */
+
+#menu{
+    background-image: url(images/fondo\ price.webp);
+}
+
+@media (max-width:355px) {
+    .padd-card{
+        padding: 0;
+    }
+}
+
+
+.card{
+    border-radius: 20px;
+    color: rgb(96, 95, 95);
+    background-color: rgb(241, 240, 240);
+}
+
+.img-menu{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.btn{
+    color: rgb(233, 232, 232);
+}
+
+@media (max-width:770px) {
+    .img-menu{
+        height: 150px;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .card p{
+        font-size: .9rem;
+        margin: 0;
+    }
+
+    .card h2{
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* Contact */
+#app{
+    padding: 7% 15%;
+    
+}
+
+.h2-app{
+    font-size: 3.5rem ;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+i{
+    margin-right: 5px;
+}
+
+.btn-app{
+    margin: 10px;
+}
+
+
+/* Footer */
+#footer{
+    padding: 7% 15%;
+    background-image: url(images/background\ contact.jpg);
+}
+
+.fa{
+    color: #fff;
+    margin: 15px;
+    margin-bottom: 40px;
+}
+
+.p-foot{
+    text-decoration: none;
+    color:#fff;
+}
+
+.p-foot:hover{
+    color: white;
+    font-size: 20px;
+}
+
+.fa:hover{
+    font-size: 30px;
+}
+
+@media (max-width:800px){
+    .fa,.p-foot{
+        color: black;
+        font-weight: bold;
+        margin: 5px;
+    }
+
+    .p-foot:hover{
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+
+
+/* Carrito de compras */
+.ul-carrito{
+    margin:auto;
+    padding: 10px;
+}
+
+.submenu {
+    position: relative;
+}
+
+@media (max-width:770px) {
+    #carrito{
+    width: 70%;
+    left: 110px;
+    }
+
+    th{
+        width: 70%;
+    }
+}
+
+@media (max-width:430px){
+    #carrito{
+        left:-5%;
+        width: 110%;
+    }
+
+    table{
+        font-size: 12px;
+    }
+}
+    @media (max-width:415px){
+        #carrito{
+            left:-5%;
+            width: 111%;
+        }
+
+        table{
+            font-size: 12px;
+        }
+
+        table td{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media (max-width:372px){
+    table th,td{
+        padding: 0;
+        margin: 0;
+    }
+    #carrito{
+        left:-8%;
+        }
+        table td{
+            padding: 0;
+            margin: 0;
+        }
+}
+
+.submenu #carrito{
+    display: none;
+}
+
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 300px;
+    min-width: 300px;
+    text-align: center;
+}
+#vaciar-carrito{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    display: inline-block;
+}
+
+#vaciar-carrito:hover{
+    background-color: rgb(228, 228, 234);
+}
+
+
+table{
+    text-align: center;
+}
+
+td{
+    padding: 12px 15px;
+    width: 64px;
+    height: 72px;
+}
+
+th{
+    padding: 10px;
+}
+
+.borrar-pizza {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+

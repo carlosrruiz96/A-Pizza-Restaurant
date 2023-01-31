@@ -48,7 +48,7 @@
 
 
 /* Media Query */
-@media (max-width:770px) {
+@media (min-width:768px) and (max-width:1199px) {
 
     .ul-carrito{
         padding: 0 !important ;
@@ -211,6 +211,10 @@ i{
     #carrito{
     width: 70%;
     left: 110px;
+    }
+    
+    .ul-carrito{
+        padding: 0;
     }
 
     th{

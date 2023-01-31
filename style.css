@@ -49,17 +49,17 @@
 
 /* Media Query */
 @media (min-width:768px) and (max-width:1199px) {
-
     .ul-carrito{
         padding: 0 !important ;
     }
-    
+
     .fa-cart-shopping{
         padding: 0;
     }
-    
+}
+@media (max-width:768px){
     .info h1{
-        font-size: 1.6rem !important ; 
+        font-size: 1.6rem  !important; 
     }
 }
 

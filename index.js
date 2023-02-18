@@ -17,9 +17,16 @@ function cargarEventListeners(){
 
     //Vaciar carrito completo
     vaciarCarritoBtn.addEventListener("click", vaciarCarro);
+
+    //Muestra los cursos de Local storage
+    document.addEventListener("DOMContentLoaded", function(){
+        articulosCarrito = JSON.parse (localStorage.getItem("carrito")) || []
+
+        carritoHTML();
+    });
 }
 
-
+ 
 //Funciones
 //Agregar Pizza
 function agregarPizza(e){
@@ -71,9 +78,9 @@ function vaciarCarro() {
     } else{
         articulosCarrito = [];
         limpiarHTML();
+        sincronizarStorage();
         alert("El carrito se ha vaciado")
     }
-    
 };
 
 //Lee el contenido del HTML que le dimos click y extrae la info de la pizza
@@ -115,8 +122,7 @@ function leerDatosPizza(pizza){
         articulosCarrito = [...articulosCarrito, infoPizza];
         alert(`La pizza de ${infoPizza.nombre} fue añadida correctamente`);
     }
-    
-    console.log(articulosCarrito)
+
     carritoHTML();
 }
 
@@ -124,7 +130,6 @@ function leerDatosPizza(pizza){
 function carritoHTML() {
     //Limpiar el HTML
     limpiarHTML();
-
 
     //Recorre el carrito y genera el HTML
     
@@ -153,7 +158,15 @@ function carritoHTML() {
 
         //Agrega el HTML del carrito en el tbody
         contenedorCarrito.appendChild(row);
-    } )
+    });
+
+    //Agregar el carrito de compras al Local Storage
+    sincronizarStorage();
+}
+
+//Local Storage
+function sincronizarStorage(){
+    localStorage.setItem("carrito", JSON.stringify(articulosCarrito))
 }
 
 
